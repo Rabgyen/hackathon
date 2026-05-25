@@ -1,0 +1,6 @@
+<svg width="240" height="96" viewBox="0 0 240 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="240" height="96" rx="22" fill="#0F172A"/>
+  <circle cx="44" cy="48" r="18" fill="#38BDF8"/>
+  <circle cx="44" cy="48" r="28" stroke="#38BDF8" stroke-width="3" stroke-dasharray="8 8"/>
+  <text x="78" y="54" fill="white" font-family="Arial, sans-serif" font-size="22" font-weight="700">ORBIT</text>
+</svg>

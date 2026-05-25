@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+body{
+  font-family: "Inter", sans-serif;
+}
+
+@keyframes sponsor-marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.sponsor-marquee-track {
+  animation: sponsor-marquee 24s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sponsor-marquee-track {
+    animation: none;
+  }
+}
