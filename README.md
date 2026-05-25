@@ -14,3 +14,13 @@ The React Compiler is not enabled on this template because of its impact on dev 
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## Deploying to GitHub Pages
+
+This project is already configured to deploy with `gh-pages`.
+
+1. Install dependencies with `npm install`.
+2. Run `npm run deploy`.
+3. Push the generated `gh-pages` branch to GitHub.
+
+If the branch does not appear in GitHub Pages settings right away, wait for the deploy to finish and then refresh the repository branches/settings page.
