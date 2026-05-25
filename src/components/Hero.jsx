@@ -43,9 +43,14 @@ const Hero = () => {
             Experience the first edition Uniglobe Hackathon and CodeFest now.
           </p>
 
-          <button className='pointer-events-auto rounded-xl bg-white px-6 py-3 text-sm font-semibold text-black transition hover:bg-white/90 sm:px-7 sm:py-3.5 sm:text-base'>
+          <a
+            href='https://forms.gle/Fz9ay18V86axXXx58'
+            target='_blank'
+            rel='noreferrer'
+            className='pointer-events-auto rounded-xl bg-white px-6 py-3 text-sm font-semibold text-black transition hover:bg-white/90 sm:px-7 sm:py-3.5 sm:text-base'
+          >
             Register now
-          </button>
+          </a>
         </div>
       </div>
     </div>
