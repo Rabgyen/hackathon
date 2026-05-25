@@ -14,7 +14,7 @@ const contactItems = [
     icon: <MdOutlinePhone />,
     label: 'Phone',
     value: '977-1-4115690 | 4115569 | 9851311179',
-    hint: 'Share the organizing team number or the college office line.',
+    hint: 'Contact us direclty using these numbers.',
   },
   {
     icon: <TfiLocationPin />,
