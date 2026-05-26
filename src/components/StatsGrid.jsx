@@ -1,11 +1,16 @@
 import React from 'react'
+import Img1 from "../assets/img-1.jpeg"
+import Img2 from "../assets/img-1.jpeg"
+import Img3 from "../assets/img-6.jpeg"
+import Img4 from "../assets/img-4.jpeg"
+import Img5 from "../assets/img-5.jpeg"
 
 const items = [
-  { id: 1, value: '25', label: 'hackathons', bg: 'https://images.unsplash.com/photo-1520975911459-7f3a3b3f0d53?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=8f5a2f3b2f6b6b3e' },
-  { id: 2, value: '500k+', label: 'total active users', bg: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=9b6b8a5f9d2df3b2' },
-  { id: 3, value: '$500k', label: 'given away', bg: 'https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=3c2f7f5b1d6a4f9a' },
-  { id: 4, value: '', label: '', bg: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=6b7eebc5dd9a2b1c' },
-  { id: 5, value: '', label: '', bg: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=0f4a3d6e4b5c1d2e' }
+  { id: 1, value: '25', label: 'hackathons', bg: Img1 },
+  { id: 2, value: '500k+', label: 'total active users', bg: Img2 },
+  { id: 3, value: '$500k', label: 'given away', bg: Img3 },
+  { id: 4, value: '', label: '', bg: Img4 },
+  { id: 5, value: '', label: '', bg: Img5 }
 ]
 
 const StatsGrid = () => {
@@ -28,7 +33,7 @@ const StatsGrid = () => {
 
           {/* Middle column: tall image + small card */}
           <div className="md:w-1/2 grid grid-cols-1 gap-6">
-            <div className="rounded-2xl overflow-hidden flex-1">
+            <div className="rounded-2xl overflow-hidden h-72 md:h-96">
               <img src={items[1].bg} alt="person" className="w-full h-full object-cover rounded-2xl" />
             </div>
 

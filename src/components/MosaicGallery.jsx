@@ -1,12 +1,16 @@
 import React from 'react'
+import Img1 from "../assets/img-2.jpeg"
+import Img6 from "../assets/img-6.jpeg"
+import Img4 from "../assets/img-4.jpeg"
+import Img7 from "../assets/img-7.jpeg"
 
 const images = [
   // large left image (IT / coding related)
-  'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1400&q=80',
+  Img1,
   // top right
-  'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80',
+  Img4,
   // bottom right
-  'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80',
+  Img7,
 ]
 
 const MosaicGallery = () => {
