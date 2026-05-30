@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { MdOutlineEmail } from "react-icons/md";
 import { MdOutlinePhone } from "react-icons/md";
 import { TfiLocationPin } from "react-icons/tfi";

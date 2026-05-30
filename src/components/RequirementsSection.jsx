@@ -1,4 +1,4 @@
-import React from 'react'
+
 
 const leftItems = [
   'Projects built using free tools and resources.',

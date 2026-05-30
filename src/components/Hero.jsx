@@ -1,4 +1,4 @@
-import React from 'react'
+
 import LiquidEther from './LiquidEther'
 
 const Hero = () => {

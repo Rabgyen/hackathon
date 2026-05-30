@@ -1,4 +1,4 @@
-import React from 'react'
+
 
 const weekDays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
 const leadingEmptyDays = 3

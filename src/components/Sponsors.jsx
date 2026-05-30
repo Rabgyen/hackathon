@@ -1,4 +1,4 @@
-import React from 'react'
+
 import alpha from '../assets/sponsors/alpha.svg'
 import nova from '../assets/sponsors/nova.svg'
 import orbit from '../assets/sponsors/orbit.svg'

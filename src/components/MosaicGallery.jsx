@@ -1,15 +1,10 @@
-import React from 'react'
 import Img1 from "../assets/img-2.jpeg"
-import Img6 from "../assets/img-6.jpeg"
 import Img4 from "../assets/img-4.jpeg"
 import Img7 from "../assets/img-7.jpeg"
 
 const images = [
-  // large left image (IT / coding related)
   Img1,
-  // top right
   Img4,
-  // bottom right
   Img7,
 ]
 
