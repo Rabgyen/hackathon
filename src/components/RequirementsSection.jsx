@@ -29,7 +29,7 @@ const CheckItem = ({ children }) => {
 const RequirementsSection = () => {
   return (
     <section className="relative w-full bg-transparent px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-      <div className="mx-auto max-w-7xl rounded-4xl border border-[#005c8f]/10 bg-white/85 px-5 py-10 shadow-[0_16px_50px_rgba(0,92,143,0.08)] backdrop-blur-md md:px-10 md:py-14">
+      <div className="mx-auto max-w-7xl rounded-4xl px-5 py-10 md:px-10 md:py-14">
         <div className="mb-10 text-center">
           <p className="text-[10px] font-medium uppercase tracking-[0.45em] text-[#005c8f]">Eligibility & Submission</p>
           <h2 className="mt-3 text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl md:text-4xl">Requirements</h2>

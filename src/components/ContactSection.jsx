@@ -61,7 +61,7 @@ const ContactSection = () => {
           ))}
         </div>
 
-        <div className='mt-8 rounded-2xl border border-[#005c8f]/10 bg-white/85 px-5 py-4 text-center text-sm text-slate-600 shadow-sm backdrop-blur-md sm:px-6'>
+        <div className='mt-8 px-5 py-4 text-center text-sm text-slate-600 sm:px-6'>
           Clear your confusion by contacting us from the above contact information.
         </div>
       </div>
