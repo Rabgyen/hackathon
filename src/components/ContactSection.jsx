@@ -28,9 +28,9 @@ const ContactSection = () => {
   return (
     <section id='contact' className='relative w-full px-4 py-12 text-slate-800 sm:px-6 sm:py-16 lg:px-8'>
       <div className='pointer-events-none absolute inset-0 -z-10 overflow-hidden'>
-        <div className='absolute left-1/2 top-0 h-72 w-72 -translate-x-1/2 rounded-full bg-[#005c8f]/10 blur-3xl' />
-        <div className='absolute right-0 top-10 h-80 w-80 rounded-full bg-[#7fbfdf]/12 blur-3xl' />
-        <div className='absolute bottom-0 left-10 h-56 w-56 rounded-full bg-[#005c8f]/8 blur-3xl' />
+        <div className='absolute left-1/2 top-0 h-56 w-56 -translate-x-1/2 rounded-full bg-[#005c8f]/8 blur-2xl' />
+        <div className='absolute right-0 top-10 h-64 w-64 rounded-full bg-[#7fbfdf]/10 blur-2xl' />
+        <div className='absolute bottom-0 left-10 h-44 w-44 rounded-full bg-[#005c8f]/6 blur-2xl' />
       </div>
 
       <div className='mx-auto max-w-7xl'>
@@ -46,7 +46,7 @@ const ContactSection = () => {
           {contactItems.map((item) => (
             <div
               key={item.label}
-              className='group relative overflow-hidden rounded-3xl border border-[#005c8f]/10 bg-white p-5 shadow-[0_16px_40px_rgba(0,92,143,0.08)] backdrop-blur-xl transition-transform duration-300 hover:-translate-y-1 hover:bg-[#f4fbff]'
+                className='group relative overflow-hidden rounded-3xl border border-[#005c8f]/10 bg-white p-5 shadow-[0_10px_24px_rgba(0,92,143,0.06)] transition-transform duration-300 hover:-translate-y-1 hover:bg-[#f4fbff]'
             >
               <div className='absolute inset-0 bg-[linear-gradient(135deg,rgba(0,92,143,0.05),transparent_40%)] opacity-70' />
               <div className='relative'>

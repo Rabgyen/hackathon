@@ -1,17 +1,41 @@
+import { useEffect, useRef, useState } from "react";
 import ShinyText from "./ShinyText";
 import Threads from "./Threads";
 
 const Hero = () => {
+  const heroRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    const element = heroRef.current;
+    if (!element) return undefined;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.15 }
+    );
+
+    observer.observe(element);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="relative">
+    <div ref={heroRef} className="relative">
       <div style={{ width: "100%", height: 700, position: "relative" }}>
-        <Threads
-          className="absolute inset-0"
-          color={[0.0, 0.36, 0.56]}
-          amplitude={0.95}
-          distance={0.55}
-          enableMouseInteraction={false}
-        />
+        {isVisible ? (
+          <Threads
+            className="absolute inset-0"
+            color={[0.0, 0.36, 0.56]}
+            amplitude={0.95}
+            distance={0.55}
+            enableMouseInteraction={false}
+          />
+        ) : (
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,92,143,0.12),transparent_55%),linear-gradient(180deg,#ffffff_0%,#f3faff_100%)]" />
+        )}
       </div>
 
       <div className="pointer-events-none absolute inset-0 flex items-center justify-center px-6 text-center">
