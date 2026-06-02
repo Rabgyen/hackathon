@@ -3,7 +3,10 @@
 const weekDays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
 const leadingEmptyDays = 3
 const daysInMonth = 31
-const highlightedDays = new Set([11, 12])
+const specialDays = {
+  10: 'CodeFest',
+  11: 'Hackathon',
+}
 
 const EventDateSection = () => {
   return (
@@ -26,10 +29,10 @@ const EventDateSection = () => {
 
             <div className='flex flex-wrap gap-3 text-sm'>
               <div className='rounded-full border border-[#005c8f]/15 bg-white px-4 py-2 text-slate-700 shadow-sm'>
-                11 July 2026
+                10 July 2026
               </div>
               <div className='rounded-full border border-[#005c8f]/15 bg-white px-4 py-2 text-slate-700 shadow-sm'>
-                12 July 2026
+                11 July 2026
               </div>
             </div>
           </div>
@@ -60,29 +63,33 @@ const EventDateSection = () => {
 
                 {Array.from({ length: daysInMonth }).map((_, index) => {
                   const dayNumber = index + 1
-                  const isHighlighted = highlightedDays.has(dayNumber)
+                  const hoverLabel = specialDays[dayNumber]
+                  const isHighlighted = Boolean(hoverLabel)
 
                   return (
                     <div
                       key={dayNumber}
                       className={`group aspect-square rounded-2xl border p-2 transition-transform duration-300 hover:-translate-y-0.5 sm:p-3 ${
                         isHighlighted
-                          ? 'border-2 border-[#005c8f] bg-linear-to-br from-[#005c8f]/6 via-white to-[#7fbfdf]/8 shadow-[0_16px_40px_rgba(0,92,143,0.14)]'
+                          ? 'border-2 border-[#005c8f] bg-linear-to-br from-[#005c8f]/6 via-white to-[#7fbfdf]/8 shadow-[0_16px_40px_rgba(0,92,143,0.14)] hover:shadow-[0_20px_50px_rgba(0,92,143,0.2)]'
                           : 'border-slate-200 bg-white hover:bg-[#f4fbff]'
                       }`}
                     >
-                      {isHighlighted ? (
-                        <div className='flex h-full items-center justify-center'>
-                          <span className='text-base font-semibold text-[#005c8f] sm:text-lg'>
-                            {dayNumber}
+                      <div className='flex h-full flex-col justify-between'>
+                        <span className={`text-sm font-semibold sm:text-base ${isHighlighted ? 'text-[#005c8f]' : 'text-slate-700'}`}>
+                          {dayNumber}
+                        </span>
+
+                        {isHighlighted ? (
+                          <span className='relative flex items-center justify-center text-[10px] font-semibold uppercase tracking-[0.28em] text-[#005c8f] sm:text-[11px]'>
+                            <span className='opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 translate-y-1 rounded-full border border-[#005c8f]/15 bg-white/95 px-2 py-1 shadow-sm'>
+                              {hoverLabel}
+                            </span>
                           </span>
-                        </div>
-                      ) : (
-                        <div className='flex h-full flex-col justify-between'>
-                          <span className='text-sm font-semibold text-slate-700 sm:text-base'>{dayNumber}</span>
+                        ) : (
                           <span className='text-[10px] uppercase tracking-[0.25em] text-slate-300'>&nbsp;</span>
-                        </div>
-                      )}
+                        )}
+                      </div>
                     </div>
                   )
                 })}
