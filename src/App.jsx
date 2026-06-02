@@ -15,13 +15,13 @@ import TestimonialSection from './components/TestimonialSection';
 
 const App = () => {
   return (
-    <div className='bg-[#120f17] min-h-screen w-full'>
+    <div className='min-h-screen w-full bg-[radial-gradient(circle_at_top,rgba(0,92,143,0.09),transparent_32%),linear-gradient(180deg,#ffffff_0%,#f7fbfd_58%,#eef7fb_100%)]'>
       <NavBar/>
       <Hero/>
-      <div className='text-white'>
+      <div className='text-slate-800'>
         <div id='about' className='flex scroll-mt-24 flex-col items-center justify-center gap-4 py-8'>
-          <h1 className='text-2xl font-semibold sm:text-3xl md:text-4xl'>About the event</h1>
-          <p className='max-w-2xl px-4 text-sm font-medium text-white/75 sm:text-base md:text-lg text-center'>The first-ever Code Fest and Hackathon at Uniglobe College will take place on June 28 and 29. The first day features an interactive and exciting Code Fest, while the final day showcases hackathon project presentations, followed by judging and winner announcements.</p>
+          <h1 className='text-2xl font-semibold text-[#005c8f] sm:text-3xl md:text-4xl'>About the event</h1>
+          <p className='max-w-2xl px-4 text-sm font-medium text-slate-600 sm:text-base md:text-lg text-center'>The first-ever Code Fest and Hackathon at Uniglobe College will take place on June 28 and 29. The first day features an interactive and exciting Code Fest, while the final day showcases hackathon project presentations, followed by judging and winner announcements.</p>
         </div>
           <StatsGrid />
             <Sponsors />
@@ -32,9 +32,9 @@ const App = () => {
             <ScheduleSection />
             <EvaluationSection />
           </div>
-          <ContactSection />
-          <MosaicGallery />
-          <TestimonialSection />
+        <ContactSection />
+        <MosaicGallery />
+        <TestimonialSection />
     </div>
   )
 }

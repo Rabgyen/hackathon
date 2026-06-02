@@ -1,5 +1,6 @@
 <svg width="240" height="96" viewBox="0 0 240 96" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="240" height="96" rx="22" fill="#111827"/>
-  <path d="M28 54H38L42 42L48 60L54 48H62" stroke="#F472B6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-  <text x="78" y="54" fill="white" font-family="Arial, sans-serif" font-size="22" font-weight="700">PULSE</text>
+  <rect width="240" height="96" rx="22" fill="#ffffff"/>
+  <rect x="1" y="1" width="238" height="94" rx="21" stroke="#005c8f" stroke-opacity="0.14"/>
+  <path d="M28 54H38L42 42L48 60L54 48H62" stroke="#005c8f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="78" y="54" fill="#0f2233" font-family="Arial, sans-serif" font-size="22" font-weight="700">PULSE</text>
 </svg>

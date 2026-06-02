@@ -13,11 +13,11 @@ const prizes = [
     amountValue: 'Rs. 30k',
     description:
       'The winning team will be celebrated for the strongest overall solution, presentation, and execution across the event.',
-    accent: 'from-[#FFE08A] via-[#FFB347] to-[#FF7A18]',
-    ring: 'border-[#FFD56A]/20',
-    bg: 'from-[#FFD56A]/15 via-white/5 to-transparent',
-    orb: 'bg-[#FFD56A]/35',
-    glow: 'shadow-[0_30px_90px_rgba(255,196,61,0.18)]',
+    accent: 'from-[#005c8f] via-[#2f89b8] to-[#cce7f4]',
+    ring: 'border-[#005c8f]/15',
+    bg: 'from-white via-[#f4fbff] to-[#e6f3f9]',
+    orb: 'bg-[#005c8f]/18',
+    glow: 'shadow-[0_30px_90px_rgba(0,92,143,0.12)]',
     image: firstPlaceImage,
     imageAlt: '1st place award',
   },
@@ -29,11 +29,11 @@ const prizes = [
     amountValue: 'Rs. 25k',
     description:
       'The runner-up team will be recognized for an impressive project, strong teamwork, and a polished final delivery.',
-    accent: 'from-[#F5F5F5] via-[#D4D4D4] to-[#A3A3A3]',
-    ring: 'border-white/20',
-    bg: 'from-white/12 via-white/6 to-transparent',
-    orb: 'bg-white/35',
-    glow: 'shadow-[0_30px_90px_rgba(255,255,255,0.12)]',
+    accent: 'from-[#dcecf4] via-[#a7cfe2] to-[#005c8f]',
+    ring: 'border-[#005c8f]/12',
+    bg: 'from-white via-[#f7fbfd] to-[#eef7fb]',
+    orb: 'bg-[#005c8f]/14',
+    glow: 'shadow-[0_30px_90px_rgba(0,92,143,0.08)]',
     image: secondPlaceImage,
     imageAlt: '2nd place award',
   },
@@ -45,11 +45,11 @@ const prizes = [
     amountValue: 'Gift hamper',
     description:
       'Selected teams will receive a special gift reward as a bonus recognition for their effort and creativity.',
-    accent: 'from-[#F7C6FF] via-[#E28CFF] to-[#B85CFF]',
-    ring: 'border-fuchsia-300/20',
-    bg: 'from-fuchsia-300/15 via-white/5 to-transparent',
-    orb: 'bg-fuchsia-300/35',
-    glow: 'shadow-[0_30px_90px_rgba(198,108,255,0.16)]',
+    accent: 'from-[#005c8f] via-[#3c98c2] to-[#bfe4f2]',
+    ring: 'border-[#005c8f]/15',
+    bg: 'from-white via-[#f7fbfd] to-[#eef7fb]',
+    orb: 'bg-[#005c8f]/16',
+    glow: 'shadow-[0_30px_90px_rgba(0,92,143,0.1)]',
     image: giftBoxImage,
     imageAlt: 'Gift award',
   },
@@ -61,11 +61,11 @@ const prizes = [
     amountValue: 'Event credits',
     description:
       'Participants will also receive credits as part of the event perks, making the experience more rewarding overall.',
-    accent: 'from-[#9BF6FF] via-[#38D9D9] to-[#0EA5E9]',
-    ring: 'border-cyan-300/20',
-    bg: 'from-cyan-300/15 via-white/5 to-transparent',
-    orb: 'bg-cyan-300/35',
-    glow: 'shadow-[0_30px_90px_rgba(56,189,248,0.16)]',
+    accent: 'from-[#cce7f4] via-[#7fbfdf] to-[#005c8f]',
+    ring: 'border-[#005c8f]/15',
+    bg: 'from-white via-[#f7fbfd] to-[#eef7fb]',
+    orb: 'bg-[#005c8f]/16',
+    glow: 'shadow-[0_30px_90px_rgba(0,92,143,0.1)]',
     image: creditsImage,
     imageAlt: 'Credits award',
   },
@@ -95,19 +95,19 @@ const PrizeSection = () => {
   }
 
   return (
-    <section className="relative w-full px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+    <section className="relative w-full px-4 py-16 text-slate-800 sm:px-6 sm:py-20 lg:px-8">
       <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute left-1/2 top-0 h-72 w-72 -translate-x-1/2 rounded-full bg-[#FFD56A]/10 blur-3xl" />
-        <div className="absolute right-0 top-20 h-80 w-80 rounded-full bg-sky-400/10 blur-3xl" />
+        <div className="absolute left-1/2 top-0 h-72 w-72 -translate-x-1/2 rounded-full bg-[#005c8f]/8 blur-3xl" />
+        <div className="absolute right-0 top-20 h-80 w-80 rounded-full bg-[#7fbfdf]/12 blur-3xl" />
       </div>
 
       <div className="mx-auto max-w-7xl">
         <div className="mb-10 text-center">
-          <p className="text-xs sm:text-sm uppercase tracking-[0.45em] text-white/40">Awards</p>
-          <h2 className="mt-3 text-2xl font-semibold tracking-tight text-white sm:text-3xl md:text-4xl">
+          <p className="text-xs sm:text-sm uppercase tracking-[0.45em] text-[#005c8f]">Awards</p>
+          <h2 className="mt-3 text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl md:text-4xl">
             Winner and Runner Up
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-sm text-white/65 sm:text-base">
+          <p className="mx-auto mt-4 max-w-2xl text-sm text-slate-600 sm:text-base">
             Celebrating Excellence: Honoring Our Winners and Runner-Ups.
           </p>
         </div>
@@ -126,14 +126,14 @@ const PrizeSection = () => {
                 <div key={prize.title} className="w-full shrink-0">
                   <div className="relative grid gap-8 p-6 sm:p-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center lg:p-10">
                     <div className="space-y-6">
-                      <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.3em] text-white/70 backdrop-blur">
+                      <div className="inline-flex items-center gap-2 rounded-full border border-[#005c8f]/10 bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.3em] text-[#005c8f] backdrop-blur">
                         <span className={`h-2 w-2 rounded-full bg-linear-to-r ${prize.accent}`} />
                         {prize.subtitle}
                       </div>
 
                       <div className="space-y-4">
-                        <h3 className="text-3xl font-black tracking-tight text-white sm:text-4xl md:text-5xl">{prize.title}</h3>
-                        <p className="max-w-2xl text-sm leading-7 text-white/70 sm:text-base md:text-lg">
+                        <h3 className="text-3xl font-black tracking-tight text-slate-900 sm:text-4xl md:text-5xl">{prize.title}</h3>
+                        <p className="max-w-2xl text-sm leading-7 text-slate-600 sm:text-base md:text-lg">
                           {prize.description}
                         </p>
                       </div>
@@ -142,7 +142,7 @@ const PrizeSection = () => {
                         <button
                           type="button"
                           onClick={goToPreviousPrize}
-                          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-white/10 text-white transition hover:-translate-x-0.5 hover:bg-white/15"
+                          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#005c8f]/15 bg-white text-[#005c8f] transition hover:-translate-x-0.5 hover:bg-[#f4fbff]"
                           aria-label="Show previous award"
                         >
                           <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
@@ -156,7 +156,7 @@ const PrizeSection = () => {
                               type="button"
                               onClick={() => setActivePrizeIndex(index)}
                               className={`h-2.5 rounded-full transition-all ${
-                                index === activePrizeIndex ? 'w-8 bg-white' : 'w-2.5 bg-white/30 hover:bg-white/50'
+                                index === activePrizeIndex ? 'w-8 bg-[#005c8f]' : 'w-2.5 bg-[#005c8f]/25 hover:bg-[#005c8f]/40'
                               }`}
                               aria-label={`Show ${dotPrize.title} award`}
                               aria-pressed={index === activePrizeIndex}
@@ -166,7 +166,7 @@ const PrizeSection = () => {
                         <button
                           type="button"
                           onClick={goToNextPrize}
-                          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-white/10 text-white transition hover:translate-x-0.5 hover:bg-white/15"
+                          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#005c8f]/15 bg-white text-[#005c8f] transition hover:translate-x-0.5 hover:bg-[#f4fbff]"
                           aria-label="Show next award"
                         >
                           <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
@@ -176,20 +176,20 @@ const PrizeSection = () => {
                       </div>
                     </div>
 
-                    <div className="relative flex min-h-70 items-center justify-center rounded-4xl border border-white/10 bg-black/20 p-6 backdrop-blur-xl sm:min-h-85 sm:p-8">
-                      <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.08),transparent_40%)] opacity-80" />
+                    <div className="relative flex min-h-70 items-center justify-center rounded-4xl border border-[#005c8f]/10 bg-white/85 p-6 backdrop-blur-xl sm:min-h-85 sm:p-8">
+                      <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(0,92,143,0.05),transparent_40%)] opacity-80" />
                       <div className="relative flex w-full flex-col items-center gap-6 text-center">
-                        <div className={`flex h-24 w-24 items-center justify-center overflow-hidden rounded-full bg-linear-to-br ${prize.accent} text-black shadow-2xl shadow-black/25 ring-1 ring-white/25 sm:h-28 sm:w-28`}>
+                        <div className={`flex h-24 w-24 items-center justify-center overflow-hidden rounded-full bg-linear-to-br ${prize.accent} text-white shadow-2xl shadow-[#005c8f]/20 ring-1 ring-white/60 sm:h-28 sm:w-28`}>
                           <img src={prize.image} alt={prize.imageAlt} className="h-16 w-16 object-contain sm:h-20 sm:w-20" />
                         </div>
 
                         <div className="space-y-2">
-                          <p className="text-xs font-semibold uppercase tracking-[0.4em] text-white/45">{prize.amountLabel}</p>
-                          <p className="text-3xl font-black tracking-tight text-white sm:text-4xl">{prize.amountValue}</p>
+                          <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[#005c8f]/70">{prize.amountLabel}</p>
+                          <p className="text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">{prize.amountValue}</p>
                         </div>
 
-                        <div className="w-full max-w-xs rounded-2xl border border-white/10 bg-white/8 px-4 py-3 text-sm text-white/65">
-                          <p className="font-semibold text-white">{prize.value}</p>
+                        <div className="w-full max-w-xs rounded-2xl border border-[#005c8f]/10 bg-white px-4 py-3 text-sm text-slate-600 shadow-sm">
+                          <p className="font-semibold text-slate-900">{prize.value}</p>
                           <p className="mt-1">{prize.subtitle}</p>
                         </div>
                       </div>

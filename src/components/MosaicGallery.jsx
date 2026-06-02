@@ -13,7 +13,7 @@ const MosaicGallery = () => {
     <section className="w-full px-4 py-8 sm:px-6 sm:py-10 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-4 sm:gap-6 md:grid-cols-3 md:items-stretch">
-          <div className="md:col-span-2 rounded-2xl overflow-hidden bg-white/5">
+          <div className="md:col-span-2 rounded-2xl overflow-hidden border border-[#005c8f]/10 bg-white shadow-[0_16px_40px_rgba(0,92,143,0.08)]">
             <img
               src={images[0]}
               alt="Event crowd"
@@ -23,7 +23,7 @@ const MosaicGallery = () => {
           </div>
 
           <div className="flex flex-col gap-4">
-            <div className="rounded-2xl overflow-hidden bg-white/5">
+            <div className="rounded-2xl overflow-hidden border border-[#005c8f]/10 bg-white shadow-[0_16px_40px_rgba(0,92,143,0.08)]">
               <img
                 src={images[1]}
                 alt="Workspace"
@@ -32,7 +32,7 @@ const MosaicGallery = () => {
               />
             </div>
 
-            <div className="rounded-2xl overflow-hidden bg-white/5">
+            <div className="rounded-2xl overflow-hidden border border-[#005c8f]/10 bg-white shadow-[0_16px_40px_rgba(0,92,143,0.08)]">
               <img
                 src={images[2]}
                 alt="Person on phone"

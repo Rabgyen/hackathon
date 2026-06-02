@@ -1,6 +1,7 @@
 <svg width="240" height="96" viewBox="0 0 240 96" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="240" height="96" rx="22" fill="#0B1220"/>
-  <circle cx="42" cy="48" r="20" fill="#FACC15"/>
-  <path d="M34 58L42 30L50 58H46L44.5 53.5H39.5L38 58H34Z" fill="#0B1220"/>
-  <text x="76" y="54" fill="white" font-family="Arial, sans-serif" font-size="22" font-weight="700">ALPHA</text>
+  <rect width="240" height="96" rx="22" fill="#ffffff"/>
+  <rect x="1" y="1" width="238" height="94" rx="21" stroke="#005c8f" stroke-opacity="0.14"/>
+  <circle cx="42" cy="48" r="20" fill="#005c8f"/>
+  <path d="M34 58L42 30L50 58H46L44.5 53.5H39.5L38 58H34Z" fill="#ffffff"/>
+  <text x="76" y="54" fill="#0f2233" font-family="Arial, sans-serif" font-size="22" font-weight="700">ALPHA</text>
 </svg>
