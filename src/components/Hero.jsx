@@ -1,39 +1,26 @@
-import LiquidEther from "./LiquidEther";
 import ShinyText from "./ShinyText";
+import Threads from "./Threads";
 
 const Hero = () => {
   return (
     <div className="relative">
-      <div style={{ width: "100%", height: 600, position: "relative" }}>
-        <LiquidEther
-          colors={["#5227FF", "#FF9FFC", "#B497CF"]}
-          mouseForce={20}
-          cursorSize={100}
-          isViscous
-          viscous={30}
-          iterationsViscous={32}
-          iterationsPoisson={32}
-          resolution={0.5}
-          isBounce={false}
-          autoDemo
-          autoSpeed={0.5}
-          autoIntensity={2.2}
-          takeoverDuration={0.25}
-          autoResumeDelay={3000}
-          autoRampDuration={0.6}
-          color0="#5227FF"
-          color1="#FF9FFC"
-          color2="#B497CF"
+      <div style={{ width: "100%", height: 700, position: "relative" }}>
+        <Threads
+          className="absolute inset-0"
+          color={[0.0, 0.36, 0.56]}
+          amplitude={0.95}
+          distance={0.55}
+          enableMouseInteraction={false}
         />
       </div>
 
       <div className="pointer-events-none absolute inset-0 flex items-center justify-center px-6 text-center">
-        <div className="max-w-4xl space-y-4">
+        <div className="max-w-5xl space-y-4">
           <ShinyText
             text="Uniglobe IT Club"
             speed={2}
             delay={0}
-            color="#b5b5b5"
+            color="#005c8f"
             shineColor="#ffffff"
             spread={120}
             direction="left"
@@ -41,17 +28,17 @@ const Hero = () => {
             pauseOnHover={false}
             disabled={false}
           />
-          <h1 className="text-3xl font-extrabold leading-tight text-white sm:text-4xl md:text-5xl">
-            <span className="bg-linear-to-r from-sky-300 via-blue-400 to-indigo-400 bg-clip-text text-transparent">
+          <h1 className="text-3xl font-extrabold leading-tight text-slate-900 sm:text-4xl md:text-5xl">
+            <span className="bg-linear-to-r from-[#005c8f] via-[#2f89b8] to-[#77bddc] bg-clip-text text-transparent">
               We are
             </span>{" "}
             the Hackathon everyone&apos;s been{" "}
-            <span className="bg-linear-to-r from-cyan-300 via-blue-400 to-indigo-500 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-[#005c8f] via-[#3c98c2] to-[#a6d9eb] bg-clip-text text-transparent">
               waiting for.
             </span>
           </h1>
 
-          <p className="mx-auto max-w-2xl text-sm font-medium text-white/75 sm:text-base md:text-lg">
+          <p className="mx-auto max-w-2xl text-sm font-medium text-slate-600 sm:text-base md:text-lg">
             Experience the first edition Uniglobe Hackathon and CodeFest now.
           </p>
 
@@ -59,7 +46,7 @@ const Hero = () => {
             href="https://forms.gle/Fz9ay18V86axXXx58"
             target="_blank"
             rel="noreferrer"
-            className="pointer-events-auto rounded-xl bg-white px-6 py-3 text-sm font-semibold text-black transition hover:bg-white/90 sm:px-7 sm:py-3.5 sm:text-base"
+            className="pointer-events-auto rounded-xl bg-[#005c8f] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-[#005c8f]/20 transition hover:bg-[#004d78] sm:px-7 sm:py-3.5 sm:text-base"
           >
             Register now
           </a>
