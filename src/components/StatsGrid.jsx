@@ -44,7 +44,7 @@ const StatsGrid = () => {
               <div className="rounded-2xl border border-[#005c8f]/10 bg-[#f6fbff] p-6 flex items-center justify-center h-40 md:h-40 shadow-[0_16px_40px_rgba(0,92,143,0.08)]">
                 <div className="text-center">
                   <div className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#005c8f]">100k+</div>
-                  <div className="text-sm text-slate-600 mt-1">Cash Price</div>
+                  <div className="text-sm text-slate-600 mt-1">Cash Pool</div>
                 </div>
               </div>
             </div>

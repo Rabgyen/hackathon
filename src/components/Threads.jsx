@@ -23,9 +23,9 @@ uniform vec2 uMouse;
 
 #define PI 3.1415926538
 
-const int u_line_count = 40;
+const int u_line_count = 24;
 const float u_line_width = 7.0;
-const float u_line_blur = 10.0;
+const float u_line_blur = 8.0;
 
 float Perlin2D(vec2 P) {
     vec2 Pi = floor(P);
@@ -126,7 +126,7 @@ const Threads = ({ color = [1, 1, 1], amplitude = 1, distance = 0, enableMouseIn
     if (!containerRef.current) return;
     const container = containerRef.current;
 
-    const renderer = new Renderer({ alpha: true });
+    const renderer = new Renderer({ alpha: true, dpr: Math.min(window.devicePixelRatio || 1, 1.5) });
     const gl = renderer.gl;
     gl.clearColor(0, 0, 0, 0);
     gl.enable(gl.BLEND);
@@ -150,6 +150,8 @@ const Threads = ({ color = [1, 1, 1], amplitude = 1, distance = 0, enableMouseIn
     });
 
     const mesh = new Mesh(gl, { geometry, program });
+    const frameInterval = 1000 / 30;
+    let lastRenderTime = 0;
 
     function resize() {
       const { clientWidth, clientHeight } = container;
@@ -179,6 +181,13 @@ const Threads = ({ color = [1, 1, 1], amplitude = 1, distance = 0, enableMouseIn
     }
 
     function update(t) {
+      if (t - lastRenderTime < frameInterval) {
+        animationFrameId.current = requestAnimationFrame(update);
+        return;
+      }
+
+      lastRenderTime = t;
+
       if (enableMouseInteraction) {
         const smoothing = 0.05;
         currentMouse[0] += smoothing * (targetMouse[0] - currentMouse[0]);

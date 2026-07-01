@@ -26,10 +26,11 @@ const NavBar = () => {
               <ul className='flex items-center gap-7 text-sm text-slate-600'>
                 <li><a href='#about' className='transition hover:text-[#005c8f]'>About</a></li>
                 <li><a href='#contact' className='transition hover:text-[#005c8f]'>Contact</a></li>
+                <li><a href='#location' className='transition hover:text-[#005c8f]'>Location</a></li>
               </ul>
 
               <a
-                href='https://forms.gle/Fz9ay18V86axXXx58'
+                href='https://docs.google.com/forms/d/e/1FAIpQLSeay5Ed-U48i1Xk5K0zmMjJzUkjaW4Z-GmBbESPpQRcm4Yflg/viewform?usp=dialog'
                 target='_blank'
                 rel='noreferrer'
                 className='rounded-xl bg-[#005c8f] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#004d78]'
@@ -57,14 +58,17 @@ const NavBar = () => {
 
           {isMenuOpen && (
             <div className='relative mt-3 space-y-2 border-t border-white/35 pt-3 md:hidden'>
-              <a href='#about' className='block rounded-lg px-3 py-2 text-sm text-slate-700 transition hover:bg-white/45 hover:text-[#005c8f]'>
+              <a href='#about' onClick={() => setIsMenuOpen(false)} className='block rounded-lg px-3 py-2 text-sm text-slate-700 transition hover:bg-white/45 hover:text-[#005c8f]'>
                 About
               </a>
-              <a href='#contact' className='block rounded-lg px-3 py-2 text-sm text-slate-700 transition hover:bg-white/45 hover:text-[#005c8f]'>
+              <a href='#contact' onClick={() => setIsMenuOpen(false)} className='block rounded-lg px-3 py-2 text-sm text-slate-700 transition hover:bg-white/45 hover:text-[#005c8f]'>
                 Contact
               </a>
+              <a href='#location' onClick={() => setIsMenuOpen(false)} className='block rounded-lg px-3 py-2 text-sm text-slate-700 transition hover:bg-white/45 hover:text-[#005c8f]'>
+                Location
+              </a>
               <a
-                href='https://forms.gle/Fz9ay18V86axXXx58'
+                href='https://docs.google.com/forms/d/e/1FAIpQLSeay5Ed-U48i1Xk5K0zmMjJzUkjaW4Z-GmBbESPpQRcm4Yflg/viewform?usp=dialog'
                 target='_blank'
                 rel='noreferrer'
                 className='mt-1 block w-full rounded-lg bg-[#005c8f] px-4 py-2 text-center text-sm font-semibold text-white shadow-sm'

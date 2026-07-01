@@ -5,6 +5,7 @@ import Threads from "./Threads";
 const Hero = () => {
   const heroRef = useRef(null);
   const [isVisible, setIsVisible] = useState(true);
+  const [shouldAnimateHero, setShouldAnimateHero] = useState(true);
 
   useEffect(() => {
     const element = heroRef.current;
@@ -22,10 +23,28 @@ const Hero = () => {
     return () => observer.disconnect();
   }, []);
 
+  useEffect(() => {
+    const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const narrowScreenQuery = window.matchMedia('(max-width: 767px)');
+
+    const updateAnimationState = () => {
+      setShouldAnimateHero(!motionQuery.matches && !narrowScreenQuery.matches);
+    };
+
+    updateAnimationState();
+    motionQuery.addEventListener('change', updateAnimationState);
+    narrowScreenQuery.addEventListener('change', updateAnimationState);
+
+    return () => {
+      motionQuery.removeEventListener('change', updateAnimationState);
+      narrowScreenQuery.removeEventListener('change', updateAnimationState);
+    };
+  }, []);
+
   return (
     <div ref={heroRef} className="relative">
       <div style={{ width: "100%", height: 700, position: "relative" }}>
-        {isVisible ? (
+        {isVisible && shouldAnimateHero ? (
           <Threads
             className="absolute inset-0"
             color={[0.0, 0.36, 0.56]}
@@ -50,7 +69,7 @@ const Hero = () => {
             direction="left"
             yoyo={false}
             pauseOnHover={false}
-            disabled={false}
+            disabled={!shouldAnimateHero}
           />
           <h1 className="text-3xl font-extrabold leading-tight text-slate-900 sm:text-4xl md:text-5xl">
             <span className="bg-linear-to-r from-[#005c8f] via-[#2f89b8] to-[#77bddc] bg-clip-text text-transparent">
@@ -67,7 +86,7 @@ const Hero = () => {
           </p>
 
           <a
-            href="https://forms.gle/Fz9ay18V86axXXx58"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSeay5Ed-U48i1Xk5K0zmMjJzUkjaW4Z-GmBbESPpQRcm4Yflg/viewform?usp=dialog"
             target="_blank"
             rel="noreferrer"
             className="pointer-events-auto rounded-xl bg-[#005c8f] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-[#005c8f]/20 transition hover:bg-[#004d78] sm:px-7 sm:py-3.5 sm:text-base"

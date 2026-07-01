@@ -26,7 +26,7 @@ const contactItems = [
 
 const ContactSection = () => {
   return (
-    <section id='contact' className='relative w-full px-4 py-12 text-slate-800 sm:px-6 sm:py-16 lg:px-8'>
+    <section id='contact' className='relative w-full scroll-mt-24 px-4 py-12 text-slate-800 sm:px-6 sm:py-16 lg:px-8'>
       <div className='pointer-events-none absolute inset-0 -z-10 overflow-hidden'>
         <div className='absolute left-1/2 top-0 h-56 w-56 -translate-x-1/2 rounded-full bg-[#005c8f]/8 blur-2xl' />
         <div className='absolute right-0 top-10 h-64 w-64 rounded-full bg-[#7fbfdf]/10 blur-2xl' />
