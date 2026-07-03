@@ -4,8 +4,8 @@ const weekDays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
 const leadingEmptyDays = 3
 const daysInMonth = 31
 const specialDays = {
-  11: 'CodeFest',
-  12: 'Hackathon',
+  17: 'CodeFest',
+  18: 'Hackathon',
 }
 
 const EventDateSection = () => {
@@ -29,10 +29,10 @@ const EventDateSection = () => {
 
             <div className='flex flex-wrap gap-3 text-sm'>
               <div className='rounded-full border border-[#005c8f]/15 bg-white px-4 py-2 text-slate-700 shadow-sm'>
-                11 July 2026
+                17 July 2026
               </div>
               <div className='rounded-full border border-[#005c8f]/15 bg-white px-4 py-2 text-slate-700 shadow-sm'>
-                12 July 2026
+                18 July 2026
               </div>
             </div>
           </div>

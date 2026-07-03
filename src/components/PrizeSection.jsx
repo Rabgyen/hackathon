@@ -58,7 +58,7 @@ const PrizeCard = ({ prize }) => {
       {/* Slim accent bar along the top edge. */}
       <span
         className={`absolute inset-x-0 top-0 h-1 ${
-          featured ? 'bg-gradient-to-r from-amber-300 via-amber-500 to-amber-300' : 'bg-[#005c8f]/15'
+          featured ? 'bg-linear-to-r from-amber-300 via-amber-500 to-amber-300' : 'bg-[#005c8f]/15'
         }`}
       />
 

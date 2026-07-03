@@ -79,6 +79,7 @@ const RegistrationSection = () => {
             </div>
           </div>
         </div>
+
       </div>
     </section>
   )

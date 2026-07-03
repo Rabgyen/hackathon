@@ -11,6 +11,7 @@ import ScheduleSection from './components/ScheduleSection';
 import EvaluationSection from './components/EvaluationSection';
 import MosaicGallery from './components/MosaicGallery';
 import RegistrationSection from './components/RegistrationSection';
+import PreviewSection from './components/PreviewSection';
 import ContactSection from './components/ContactSection';
 import LocationSection from './components/LocationSection';
 import TestimonialSection from './components/TestimonialSection';
@@ -23,7 +24,7 @@ const App = () => {
       <div className='text-slate-800'>
         <div id='about' className='flex scroll-mt-24 flex-col items-center justify-center gap-4 py-8'>
           <h1 className='text-2xl font-semibold text-[#005c8f] sm:text-3xl md:text-4xl'>About the event</h1>
-          <p className='max-w-2xl px-4 text-sm font-medium text-slate-600 sm:text-base md:text-lg text-center'>The first-ever Code Fest and Hackathon at Uniglobe College will take place on July 11 and 12. The first day features an interactive and exciting Code Fest, while the final day showcases hackathon project presentations, followed by judging and winner announcements.</p>
+          <p className='max-w-2xl px-4 text-sm font-medium text-slate-600 sm:text-base md:text-lg text-center'>The first-ever Code Fest and Hackathon at Uniglobe College will take place on July 17 and 18. The first day features an interactive and exciting Code Fest, while the final day showcases hackathon project presentations, followed by judging and winner announcements.</p>
         </div>
           <StatsGrid />
             <EventTitleSection />
@@ -34,6 +35,7 @@ const App = () => {
             <EvaluationSection />
           </div>
         <RegistrationSection />
+          <PreviewSection />
         <ContactSection />
         <LocationSection />
         <MosaicGallery />
