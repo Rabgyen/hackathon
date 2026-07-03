@@ -34,7 +34,7 @@ const RegistrationSection = () => {
             <div className='relative flex h-full flex-col'>
               <p className='text-xs font-medium uppercase tracking-[0.35em] text-white/80'>Registration Fee</p>
               <div className='mt-3 flex items-baseline gap-2'>
-                <span className='text-4xl font-semibold sm:text-5xl'>Rs. 8,000</span>
+                <span className='text-4xl font-semibold sm:text-5xl'>Rs. 5,000</span>
               </div>
               <p className='mt-2 text-sm text-white/80'>per team &middot; one-time payment</p>
 

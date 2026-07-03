@@ -8,10 +8,10 @@ const prizes = [
   {
     place: '2nd',
     title: 'Runner Up',
-    amount: 'Rs. 30k',
+    amount: 'Rs. 15k',
     reward: 'Trophy + cash prize',
     description:
-      'Second place still walks away with a trophy and Rs. 30k. Not a bad haul for one weekend of building.',
+      'Second place still walks away with a trophy and Rs. 15k. Not a bad haul for one weekend of building.',
     image: secondPlaceImage,
     imageAlt: '2nd place award',
     accent: { text: 'text-slate-500', ring: 'ring-slate-200', tint: 'bg-slate-50', badge: 'bg-slate-100 text-slate-600' },
@@ -20,10 +20,10 @@ const prizes = [
   {
     place: '1st',
     title: 'Winner',
-    amount: 'Rs. 50k',
+    amount: 'Rs. 35k',
     reward: 'Trophy + cash prize',
     description:
-      'Top team takes home the trophy and Rs. 50k. Whoever ships the best project this weekend earns it.',
+      'Top team takes home the trophy and Rs. 35k. Whoever ships the best project this weekend earns it.',
     image: firstPlaceImage,
     imageAlt: '1st place award',
     accent: { text: 'text-amber-600', ring: 'ring-amber-200', tint: 'bg-amber-50', badge: 'bg-amber-100 text-amber-700' },
@@ -120,7 +120,7 @@ const PrizeSection = () => {
             What&apos;s on the line
           </h2>
           <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base">
-            Over Rs. 80k in cash, trophies, and a few surprises for the teams that stand out.
+            Over Rs. 50k in cash, trophies, and a few surprises for the teams that stand out.
           </p>
         </div>
 
