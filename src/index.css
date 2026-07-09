@@ -37,3 +37,47 @@ body{
     animation: none;
   }
 }
+
+/* Floating emoji burst on highlighted calendar days */
+@keyframes emoji-pop-float {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 0) scale(0.3) rotate(0deg);
+  }
+  15% {
+    opacity: 1;
+    transform: translate(calc(-50% + var(--dx) * 0.35), -10px) scale(1) rotate(var(--r));
+  }
+  100% {
+    opacity: 0;
+    transform: translate(calc(-50% + var(--dx)), -58px) scale(1.15) rotate(calc(var(--r) * -1.4));
+  }
+}
+
+.emoji-burst {
+  position: absolute;
+  left: 50%;
+  top: 42%;
+  font-size: 1rem;
+  line-height: 1;
+  opacity: 0;
+  pointer-events: none;
+  will-change: transform, opacity;
+  transform: translate(-50%, 0) scale(0.3);
+  filter: drop-shadow(0 4px 6px rgba(0, 92, 143, 0.18));
+}
+
+.day-cell:hover .emoji-burst,
+.day-cell:focus-within .emoji-burst {
+  animation: emoji-pop-float 1.6s ease-out infinite;
+  animation-delay: var(--delay, 0s);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .day-cell:hover .emoji-burst,
+  .day-cell:focus-within .emoji-burst {
+    animation: none;
+    opacity: 1;
+    transform: translate(calc(-50% + var(--dx)), -20px);
+  }
+}

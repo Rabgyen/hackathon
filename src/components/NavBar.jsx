@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import unitech from '../assets/UniTech.png'
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,12 +15,10 @@ const NavBar = () => {
 
           <div className='relative flex items-center'>
             <a href='/' className='flex items-center gap-2'>
-              <span className='inline-flex h-7 w-7 items-center justify-center rounded-full border border-white/60 bg-white/55 shadow-inner shadow-white/60'>
-                <svg viewBox='0 0 24 24' className='h-4 w-4 text-[#005c8f]' fill='none' stroke='currentColor' strokeWidth='1.8'>
-                  <path d='M4 12h16M12 4v16M6.3 6.3l11.4 11.4M17.7 6.3L6.3 17.7' />
-                </svg>
+              <span className='inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/60 bg-white/55 shadow-inner shadow-white/60'>
+                <img src={unitech} alt="Logo" className=' object-contain'/>
               </span>
-              <span className='text-sm font-semibold tracking-wide text-slate-900 sm:text-base'>Uniglobe College IT Club</span>
+              <span className='text-sm font-semibold tracking-wide text-slate-900 sm:text-base'>UniTech</span>
             </a>
 
             <div className='ml-auto hidden items-center gap-7 md:flex'>

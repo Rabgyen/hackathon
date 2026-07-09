@@ -4,9 +4,13 @@ const weekDays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
 const leadingEmptyDays = 3
 const daysInMonth = 31
 const specialDays = {
-  17: 'CodeFest',
-  18: 'Hackathon',
+  17: { label: 'CodeFest', emojis: ['💻', '⚡', '🚀', '✨', '🔥', '🎯'] },
+  18: { label: 'Hackathon', emojis: ['🏆', '🧠', '💡', '🎉', '⌨️', '🌟'] },
 }
+
+// Deterministic spread so each emoji drifts in its own direction while floating.
+const burstOffsets = [-30, 26, -14, 18, -4, 34]
+const burstRotations = [-22, 20, -14, 16, -8, 24]
 
 const EventDateSection = () => {
   return (
@@ -63,19 +67,38 @@ const EventDateSection = () => {
 
                 {Array.from({ length: daysInMonth }).map((_, index) => {
                   const dayNumber = index + 1
-                  const hoverLabel = specialDays[dayNumber]
-                  const isHighlighted = Boolean(hoverLabel)
+                  const special = specialDays[dayNumber]
+                  const isHighlighted = Boolean(special)
 
                   return (
                     <div
                       key={dayNumber}
-                      className={`group aspect-square rounded-2xl border p-2 transition-transform duration-300 hover:-translate-y-0.5 sm:p-3 ${
+                      tabIndex={isHighlighted ? 0 : undefined}
+                      className={`group day-cell relative aspect-square rounded-2xl border p-2 transition-transform duration-300 hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#005c8f]/40 sm:p-3 ${
                         isHighlighted
                           ? 'border-2 border-[#005c8f] bg-linear-to-br from-[#005c8f]/6 via-white to-[#7fbfdf]/8 shadow-[0_16px_40px_rgba(0,92,143,0.14)] hover:shadow-[0_20px_50px_rgba(0,92,143,0.2)]'
                           : 'border-slate-200 bg-white hover:bg-[#f4fbff]'
                       }`}
                     >
-                      <div className='flex h-full flex-col justify-between'>
+                      {isHighlighted && (
+                        <div className='pointer-events-none absolute inset-0 z-10 overflow-visible' aria-hidden='true'>
+                          {special.emojis.map((emoji, emojiIndex) => (
+                            <span
+                              key={emojiIndex}
+                              className='emoji-burst'
+                              style={{
+                                '--dx': `${burstOffsets[emojiIndex % burstOffsets.length]}px`,
+                                '--r': `${burstRotations[emojiIndex % burstRotations.length]}deg`,
+                                '--delay': `${emojiIndex * 0.18}s`,
+                              }}
+                            >
+                              {emoji}
+                            </span>
+                          ))}
+                        </div>
+                      )}
+
+                      <div className='relative flex h-full flex-col justify-between'>
                         <span className={`text-sm font-semibold sm:text-base ${isHighlighted ? 'text-[#005c8f]' : 'text-slate-700'}`}>
                           {dayNumber}
                         </span>
@@ -83,7 +106,7 @@ const EventDateSection = () => {
                         {isHighlighted ? (
                           <span className='relative flex items-center justify-center text-[10px] font-semibold uppercase tracking-[0.28em] text-[#005c8f] sm:text-[11px]'>
                             <span className='opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 translate-y-1 rounded-full border border-[#005c8f]/15 bg-white/95 px-2 py-1 shadow-sm'>
-                              {hoverLabel}
+                              {special.label}
                             </span>
                           </span>
                         ) : (
