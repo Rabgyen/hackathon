@@ -1,11 +1,11 @@
 
 
 const weekDays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
-const leadingEmptyDays = 3
+const leadingEmptyDays = 6
 const daysInMonth = 31
 const specialDays = {
-  17: { label: 'CodeFest', emojis: ['💻', '⚡', '🚀', '✨', '🔥', '🎯'] },
-  18: { label: 'Hackathon', emojis: ['🏆', '🧠', '💡', '🎉', '⌨️', '🌟'] },
+  7: { label: 'CodeFest', emojis: ['💻', '⚡', '🚀', '✨', '🔥', '🎯'] },
+  8: { label: 'Hackathon', emojis: ['🏆', '🧠', '💡', '🎉', '⌨️', '🌟'] },
 }
 
 // Deterministic spread so each emoji drifts in its own direction while floating.
@@ -25,7 +25,7 @@ const EventDateSection = () => {
           <div className='space-y-5'>
             <p className='text-xs font-medium uppercase tracking-[0.45em] text-[#005c8f]'>Event Date</p>
             <h2 className='text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl md:text-5xl'>
-              July 2026
+              August 2026
             </h2>
             <p className='max-w-xl text-sm leading-7 text-slate-600 sm:text-base'>
               Circle the date for this upcoming event. Be there to experience something amazing.
@@ -33,10 +33,10 @@ const EventDateSection = () => {
 
             <div className='flex flex-wrap gap-3 text-sm'>
               <div className='rounded-full border border-[#005c8f]/15 bg-white px-4 py-2 text-slate-700 shadow-sm'>
-                17 July 2026
+                7 August 2026
               </div>
               <div className='rounded-full border border-[#005c8f]/15 bg-white px-4 py-2 text-slate-700 shadow-sm'>
-                18 July 2026
+                8 August 2026
               </div>
             </div>
           </div>
@@ -48,7 +48,7 @@ const EventDateSection = () => {
               <div className='mb-5 flex items-center justify-between gap-4'>
                 <div>
                   <p className='text-xs font-medium uppercase tracking-[0.35em] text-[#005c8f]'>Calendar</p>
-                  <h3 className='mt-2 text-2xl font-semibold text-slate-900'>July 2026</h3>
+                  <h3 className='mt-2 text-2xl font-semibold text-slate-900'>August 2026</h3>
                 </div>
               </div>
 
