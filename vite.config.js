@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/College-Hackathon-and-CodeFest/",
+  base: "/hackathon/",
   plugins: [react(),
      tailwindcss(),
   ],
