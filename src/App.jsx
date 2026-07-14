@@ -4,6 +4,7 @@ import NavBar from './components/NavBar';
 import StatsGrid from './components/StatsGrid';
 import Sponsors from './components/Sponsors';
 import EventTitleSection from './components/EventTitleSection';
+import CountdownTimer from './components/CountdownTimer';
 import EventDateSection from './components/EventDateSection';
 import PrizeSection from './components/PrizeSection';
 import RequirementsSection from './components/RequirementsSection';
@@ -28,6 +29,7 @@ const App = () => {
         </div>
           <StatsGrid />
             <EventTitleSection />
+            <CountdownTimer />
             <EventDateSection />
             <PrizeSection />
             <RequirementsSection />
